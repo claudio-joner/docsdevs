@@ -1,0 +1,28 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+# Entorno virtual
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Django
+db.sqlite3
+*.log
+local_settings.py
+
+# Static y media generados
+staticfiles/
+media/
+
+# VS Code
+.vscode/
+
+# PyCharm / IDEs
+.idea/
+
+# Sistema
+.DS_Store
+Thumbs.db
