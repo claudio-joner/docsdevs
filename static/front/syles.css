@@ -1,0 +1,47 @@
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --muted: #6c757d;
+  --card-bg: #ffffff;
+  --border: rgba(0,0,0,.1);
+}
+
+body.app-body {
+  font-family: "Abel", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.app-container { max-width: 980px; }
+.app-card { background: var(--card-bg); border-color: var(--border); }
+
+/* Sort */
+th.sortable { cursor: pointer; user-select: none; white-space: nowrap; }
+th.sortable .sort-indicator { margin-left: 6px; }
+
+/* Dark mode */
+body.app-body.dark {
+  --bg: #0b0d12;
+  --text: #f5f6f7;
+  --muted: #b6bcc5;
+  --card-bg: #121622;
+  --border: rgba(255,255,255,.14);
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+body.app-body.dark .text-muted,
+body.app-body.dark .small.text-muted { color: var(--muted) !important; }
+
+body.app-body.dark .table { color: var(--text) !important; }
+body.app-body.dark .table thead th { color: var(--text) !important; }
+
+body.app-body.dark .btn-outline-secondary {
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+
+/* Blur del fondo cuando el modal está abierto */
+.modal-backdrop.show {
+  backdrop-filter: blur(6px);
+}
