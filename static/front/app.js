@@ -1,5 +1,12 @@
-const API_BASE = "http://127.0.0.1:8000/api/links/";
-const TOKEN_URL = "http://127.0.0.1:8000/api/token/";
+const API_ORIGIN = window.location.origin; 
+// En PythonAnywhere: https://projectsdjango.pythonanywhere.com
+// En local: http://127.0.0.1:8000 (si servís el front desde Django)
+
+const API_BASE = `${API_ORIGIN}/api/links/`;
+const TOKEN_URL = `${API_ORIGIN}/api/token/`;
+
+// const API_BASE = "http://127.0.0.1:8000/api/links/";
+// const TOKEN_URL = "http://127.0.0.1:8000/api/token/";
 
 let accessToken = localStorage.getItem("accessToken") || null;
 
@@ -323,7 +330,7 @@ document.addEventListener("DOMContentLoaded", () => {
       };
 
       try {
-        const res = await fetch("http://127.0.0.1:8000/api/links/", {
+        const res = await fetch(API_BASE, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
